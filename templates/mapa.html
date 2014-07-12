@@ -1,0 +1,86 @@
+$def with (nombre)
+<html>
+    <head>    
+        <title> Tu paradero SITP </title>
+        <link href="/static/css/estilos.css" rel="stylesheet" type="text/css" />
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+          <!-- Librerias para el selector de date -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript"   src="http://maps.google.com/maps/api/js?sensor=false"> </script>
+        <script type="text/javascript"   src="/static/js/functions.js"> </script>
+                      
+        <script>
+        //Creo var map global para acceder desde cualquier parte del codigo
+        var map;                
+        var counter_check = 0;
+
+
+        jQuery(document).ready(function() {
+            initialize();
+        });
+        jQuery(document).ajaxStart(
+          function() {
+            jQuery("body").addClass("loading");
+          }
+          ).ajaxStop(
+          function() 
+            {
+              jQuery("body").removeClass("loading");
+          });
+    
+        </script>
+
+    </head>
+    <body >
+        <div id="heading">
+            <h1> Tu paradero SITP </h1> 
+             Natalia Bustacara 20091025025 <br>
+             Nicolas Vergara 20091025
+			 En colaboracion de Alejandro Rojas
+         </div>
+         <div id="container">
+         <div id="left">
+             <h3> Ingrese sus coordenadas actuales  </h3>
+
+                Coordenada x<br><input type="text" id="cx" class="textbox">  <br>
+                Coordenada y<br><input type="text" id="cy" class="textbox">  <br>
+                <br>
+                <button type="button" class="button" onclick="get_paraderos_cercanos('both');"> Obtener estaciones y paraderos cercanos </button> <br>
+                <br>
+                <button type="button" class="button" onclick="get_paraderos_cercanos('tm');"> Obtener estaciones cercanas </button> <br>
+                <br>
+                <button type="button" class="button" onclick="get_paraderos_cercanos('sitp');"> Obtener paraderos cercanos </button> <br>
+                
+                
+            </div>
+            
+            <div id="map_canvas" ></div>
+        </div>
+        <div id="footer" style="height:100px; overflow:auto; word-wrap:break-word;">
+        <div id="footer_left">        
+          <h3> Paraderos mas cercanos </h3>
+            <table id="tabla_paraderos">
+                  <tbody>
+                     <tr>
+                         <td> <b>Nombre </b> </td> <td> <b>Longitud</b> </td> <td><b>Latitud</b> </td>  <td><b>Descripci&oacute;n</b> </td>  <td><b>Rutas</b> </td>
+                     </tr>
+                  </tbody>
+            </table>
+        </div>
+        <div id="footer_right">        
+          <h3> Estaciones mas cercanas </h3>
+            <table id="tabla_estaciones">
+                  <tbody>
+                     <tr>
+                         <td> <b>Nombre </b> </td> <td> <b>Longitud</b> </td> <td><b>Latitud</b> </td>  <td><b>Descripci&oacute;n</b> </td>  <td><b>Rutas</b> </td>
+                     </tr>
+                  </tbody>
+            </table>
+        </div>
+
+        </div>
+        <div class="modal"><!-- Place at bottom of page --></div>
+    </body>
+    
+</html>

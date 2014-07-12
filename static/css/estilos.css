@@ -1,0 +1,187 @@
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+	
+}
+.textbox { 
+    background-color: #D7EFFF; 
+    border: solid 1px #646464; 
+    outline: none; 
+    padding: 2px 2px; 
+} 
+.textbox:hover { 
+    background-color: #33CCCC; 
+} 
+.textbox:focus { 
+    background-color: #00CCCC; 
+} 
+.textbox:active { 
+    background-color: #white; 
+}
+
+body,
+html {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:#DADADA;
+}
+
+table, th, td {
+   border: 1px solid white;
+} 
+/* Tomado de : http://www.java2s.com/Code/HTMLCSS/Layout/Twocolumnswithheaderandfooter.htm */
+
+#footer {
+    border: 1px solid white;
+    width: 100%;
+    background: #233743;
+	color: white;
+}
+
+#heading {
+    border: 1px solid white;
+    width: 100%;
+    background: #233743;
+    
+}
+#container {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    margin-left: 50px;
+    background:#DADADA;
+}
+#heading {
+    margin: 10px auto -1px auto;
+    color: white;
+}
+#heading h1 {
+    margin: 5px;
+}
+#left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    background: #2C4823;
+    padding: 5px;
+    border-right: 1px solid black;
+	background: #28B78D;
+}
+#map_canvas {
+    width: 700px;
+    height: 500px;
+    margin-left: 451px;
+    background: #DADADA;
+    border: 1px solid white;
+    padding: 10px;
+}
+#footer {
+    margin: -1px auto 10px auto;
+}
+#footer p {
+    margin: 5px;
+}
+
+
+#footer_left {
+    width: 500px;
+    float: left;
+	color: white;
+}  
+
+
+#footer_right {
+    width: 500px;
+    float: right;
+	color: white;
+}  
+
+
+/* http://stackoverflow.com/questions/1964839/jquery-please-wait-loading-animation */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
+
+
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #445561;
+   background: -webkit-gradient(linear, left top, left bottom, from(#9dbbcf), to(#445561));
+   background: -webkit-linear-gradient(top, #9dbbcf, #445561);
+   background: -moz-linear-gradient(top, #9dbbcf, #445561);
+   background: -ms-linear-gradient(top, #9dbbcf, #445561);
+   background: -o-linear-gradient(top, #9dbbcf, #445561);
+   padding: 3px 6px;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 10px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #33749c;
+   background: #33749c;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+
+label {
+    width:60px;
+    float:left;
+    font-size:12px;
+    line-height:24px;
+    font-weight:bold;
+
+}
+input {
+    width:300px;
+    margin-bottom:5px;
+    line-height:18px;
+    padding:2px 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #CCC;
+}
